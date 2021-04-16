@@ -1,0 +1,182 @@
+<!DOCTYPE HTML>
+<!--
+	Read Only by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Vicsek Model | Ritam Das</title>
+		<link rel="shortcut icon" type="image/png" href="favicon.png">
+		<meta charset="utf-8" />
+		<meta name="description" content="Ritam's Personal Website">
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+    <script type="text/javascript" charset="utf-8" 
+src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML,
+https://vincenttam.github.io/javascripts/MathJaxLocal.js"></script>
+		
+	</head>
+	<body class="is-preload">
+		
+		<!-- Header -->
+			<section id="header">
+				<header>
+					<span class="image avatar"><a href="index.html"><img src="images/avatar.png" alt="" /></a></span>
+					<h1 id="logo"><a href="index.html">Ritam Das</a></h1>
+					<p>Curious coder and  an aspiring Physicist</p>
+				</header>
+				<hr style="margin: -1em 0 1em 0;">
+				<h3>	Vicsek Model</h3>
+				<hr style="margin: 1em 0 0 0;">
+				<nav id="nav">
+				
+					<ul>
+						<li><a href="#CollectiveMotion" class="active">Collective Motion</a></li>
+						<li><a href="#Model">The Model</a></li>
+						<li><a href="#Simulation">Simulation</a></li>
+						
+						<li><a href="#References">References</a></li>
+						<!--<li><a href="#four">Contact</a></li>-->
+					</ul>
+				</nav>
+				<footer>
+					<ul class="icons">
+						<li><a href="https://twitter.com/_ritamdas?s=08" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+						<li><a href="https://www.linkedin.com/in/dasritam/" class="icon brands fa-linkedin" target="_blank"><span class="label">LinkedIn</span></a></li>
+						<!--<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li> -->
+						<li><a href="https://github.com/dasritam" class="icon brands fa-github"><span class="label">Github</span></a></li>
+						<li><a href="mailto:ms19029@iisermohali.ac.in" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+					</ul>
+				</footer>
+			</section>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- One -->
+						
+
+							<section id="CollectiveMotion">
+								<div id="particles-js" data-position="center"></div>></div>
+									<script type="text/javascript" src="particles.js"></script>
+									<script type="text/javascript" src="app.js"></script>
+								 <!--<div class="image main" data-position="center">
+									<img src="images/hehe969.png" alt="" />
+									</div> -->
+								<div class="container">
+									<header class="major">
+										<h2>The Vicsek Model</h2>
+										<h3>Collective Motion</h3>
+									</header>
+									<p>
+                    Coordinated behaviour is extremely common in animals. One such example is the phenomenon of collective motion. It is the spontaneous emergence of ordered movement in a system consisting of many self-propelled agents, for example flocking in birds, swarming in insects, schooling fishes, etc.
+                  </p>
+
+									<p>
+										Vicsek model is a mathematical model describing the emergent properties in self-propelled particles. The central idea is that every particle aligns itself in the average direction of motion of its neighbours.
+									</p>
+
+
+								</div>
+							</section>
+
+						<!-- Two -->
+							<section id="Model">
+								<div class="container">
+									<h3> The Model </h3>
+                <p> A box of size L was taken with periodic boundary conditions. We consider point particles moving on the plance. The particles have a certain radius of interaction beyond which they cannot percieve their surroundings. Positions were updated at an interval of $\Delta t=1$
+								</p>
+								<p>The particle positions are randomly initialized within the L $\times$ L box. Each of the particles are given a fixed speed $v$ at a random direction $\theta$</p>
+								<p>The positions are updated as follows</p>
+								<div class="myeqn">
+                  \[
+                      x_i (t+1) = x_i(t) + v_i (t)\Delta t
+                  \]
+                </div>
+								<p> The direction of motion of the particles after every time step is given by,</p>
+                <div class="myeqn">
+                  \[
+                      \theta (t+1) = \langle\theta(t)\rangle_r + \Delta \theta
+                  \]
+                </div>
+
+									<p>
+                    $\langle\theta(t)\rangle_r$ is the average direction of the
+										velocities of particles (including particle i) being
+										within a circle of radius r surrounding the given particle.
+                  </p>
+									<p>
+										In our case $\Delta \theta$ was taken to be a random number chosen with uniform probability from the interval $[\ \eta/2, \eta/2]$
+									</p>
+									<p>
+										Thus we have 3 free parameters for a system of given size L:
+									</p>
+									<ul>
+										<li>$\eta$</li>
+										<li>$\rho\ (=\frac{N}{L^2})$</li>
+										<li>$v$.</li>  
+									</ul>
+								</div>
+							</section>
+
+						<!-- Three -->
+						<section id="Simulation">
+							<div class="container">
+								<h3> Simulation </h3>
+										<video class='center' width="80%" height="100%" playsinline autoplay muted loop>
+											<source src="images/animation.mp4" type="video/mp4">
+											<source src="images/animation.ogg" type="video/ogg">
+										Your browser does not support the video tag.
+										</video>
+										<p>Color of a particle corresponds to its direction of motion.</p>
+							</div>
+
+							
+						</section>
+
+
+						<!-- Four -->
+						<section id="References">
+							<div class="container">
+								<h3> References </h3>
+							<ol>
+								<li>Vicsek, Tamás; Czirók, András; Ben-Jacob, Eshel; Cohen, Inon; Shochet, Ofer (1995-08-07). "Novel Type of Phase Transition in a System of Self-Driven Particles".</li>
+							</ol>
+						
+							</div>
+						</section>
+
+					
+
+						
+
+					</div> 
+
+				<!-- Footer -->
+					<section id="footer">
+						<div class="container">
+							<ul class="copyright">
+								<li>&copy; Ritam Das | 2021</li>
+								<!--<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>-->
+							</ul>
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

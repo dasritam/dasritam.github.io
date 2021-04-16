@@ -97,6 +97,12 @@ input, select, textarea {
 			transition: none !important;
 		}
 
+		#particles-js {
+			display: block;
+			border-radius: 0;
+			height: 20em;
+		}
+
 	body, input, select, textarea {
 		color: #888;
 		font-family: "Lato", sans-serif;
